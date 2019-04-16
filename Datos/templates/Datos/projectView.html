@@ -1,0 +1,20 @@
+{% extends "core/base.html" %}
+    <title>{% block titles %}Portafolio Proyectos{% endblock %}</title>
+    {% block background %}{{proyect.image.url}}{% endblock %}
+    {% block headerss %}
+        <h1>Proyecto {{proyect.name}}</h1>
+    {% endblock %}
+    {% block content %}
+	    <!-- Contenido Principal -->
+	    <div class="container">
+           <!-- Proyecto -->
+                <div class="row project">  	
+                    <div class="col-lg-12 col-md-8">
+                        <h2 class="section-heading title">{{proyect.name}}</h2>   
+                        <p>{{proyect.description}}</p>
+                        <p><a href="{% url 'portfolio' %}">Volver</a></p>
+                    </div>
+                </div>
+    	    <!-- Fin Contenido -->
+		</div>
+    {% endblock%}
