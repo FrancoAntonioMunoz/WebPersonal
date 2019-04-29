@@ -1,6 +1,14 @@
 {% extends "Datos/base.html"%}
-{%block title%}Inicio{%endblock%}
-{%block headerss%}Esta en inicio{%endblock%}
+{%block title%}{{pages.name}}{%endblock%}
+{%block headerss%}{{pages.headers}}{%endblock%}
 {%block background%}{% load static %}{% static 'Datos/img/home-bg.jpg' %}{%endblock%}
 {% block content %}
+  <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <h4><p>{{pages.content}}</p></h4>
+            <br>
+          </div>
+        </div>
+      </div>
 {% endblock%}

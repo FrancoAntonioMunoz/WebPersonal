@@ -1,8 +1,16 @@
-{% extends "core/base.html"%}
-{%block title%}Porfolio{%endblock%}
-{%block headerss%}Porfolio{%endblock%}
-{%block background%}{% load static %}{% static 'core/img/portfolio-bg.jpg' %}{%endblock%}
+{% extends "Datos/base.html"%}
+{%block title%}{{pages.name}}{%endblock%}
+{%block headerss%}{{pages.headers}}{%endblock%}
+{%block background%}{% load static %}{% static 'Datos/img/portfolio-bg.jpg' %}{%endblock%}
 {% block content %}
+<div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <h4><p>{{pages.content}}</p></h4>
+        <br>
+      </div>
+    </div>
+  </div>
   {% for p in proyects %}
     <div class="row Project">
       <div class="col-lg-3 col-md-4 offset-lg-1">

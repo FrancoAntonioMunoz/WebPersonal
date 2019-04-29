@@ -1,17 +1,16 @@
-{% extends "core/base.html"%}
-{%block title%}About{%endblock%}
-{%block headerss%}Acerca de{%endblock%}
-{%block background%}{% load static %}{% static 'core/img/about-bg.jpg' %}{%endblock%}
+{% extends "Datos/base.html"%}
+{%block title%}{{pages.name}}{%endblock%}
+{%block headerss%}{{pages.headers}}{%endblock%}
+{%block background%}{% load static %}{% static 'Datos/img/about-bg.jpg' %}{%endblock%}
 {% block content %}
 <div class="container">
         <div class="row">   
           <div class="col-lg-3 col-md-4 offset-lg-1">
-            <img class="img-fluid avatar" src="core/img/avatar.jpg" alt="">
+            <img class="img-fluid avatar" src="{% static 'Datos/img/avatar.jpg' %}" alt="Mi Foto">
           </div>
           <div class="col-lg-7 col-md-8">
-            <h2 class="section-heading">Fanco Muñoz</h2>   
-            <p>lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit, fuga atque ea nobis sit soluta odio.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit...</p>
+            <h2 class="section-heading">{{datos.name}}</h2>   
+            <h4><p>{{pages.content}}</p></h4>
           </div>
         </div>  
       </div>
