@@ -1,7 +1,7 @@
 {% extends "Datos/base.html"%}
 {%block title%}{{pages.name}}{%endblock%}
 {%block headerss%}{{pages.headers}}{%endblock%}
-{%block background%}{% load static %}{% static 'Datos/img/contact-bg.jpg' %}{%endblock%}
+{%block background%}{{pages.image.url}}{%endblock%}
 {% block content %}
 <div class="container">
         <div class="row">

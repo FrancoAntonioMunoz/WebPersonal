@@ -7,15 +7,18 @@ def image_Datos2(isinstance, filename):
     return 'Datos/image/' + filename
 def image_Datos3(isinstance, filename):
     return 'Datos/image/' + filename
+def image_Datos4(isinstance, filename):
+    return 'Datos/image/' + filename
 
 class Datos(models.Model):
     name = models.CharField(max_length=100,null=True,blank=True,verbose_name='Nombre Personal')
     descent=models.CharField(max_length=240,null=True,blank=True,verbose_name='Url')
-    image1=models.ImageField(upload_to=image_Datos1)
+    image1=models.ImageField(upload_to=image_Datos1,null=True,blank=True)
     descent1=models.CharField(max_length=240,null=True,blank=True,verbose_name='Url')
-    image2=models.ImageField(upload_to=image_Datos2)
+    image2=models.ImageField(upload_to=image_Datos2,null=True,blank=True)
     descent2=models.CharField(max_length=240,null=True,blank=True,verbose_name='Url')
-    image3=models.ImageField(upload_to=image_Datos3)
+    image3=models.ImageField(upload_to=image_Datos3,null=True,blank=True)
+    image4=models.ImageField(upload_to=image_Datos4,null=True,blank=True)
     state=models.CharField(max_length=240,default="Activo")
     created= models.DateTimeField(auto_now_add=True,verbose_name='Fecha Creación')
     updated= models.DateTimeField(auto_now=True,verbose_name='Fecha Actualización')

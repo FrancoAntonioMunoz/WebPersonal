@@ -1,12 +1,12 @@
 {% extends "Datos/base.html"%}
 {%block title%}{{pages.name}}{%endblock%}
 {%block headerss%}{{pages.headers}}{%endblock%}
-{%block background%}{% load static %}{% static 'Datos/img/about-bg.jpg' %}{%endblock%}
+{%block background%}{{pages.image.url}}{%endblock%}
 {% block content %}
 <div class="container">
         <div class="row">   
           <div class="col-lg-3 col-md-4 offset-lg-1">
-            <img class="img-fluid avatar" src="{% static 'Datos/img/avatar.jpg' %}" alt="Mi Foto">
+            <img class="img-fluid avatar" src="{{datos.image4.url}}" alt="Mi Foto">
           </div>
           <div class="col-lg-7 col-md-8">
             <h2 class="section-heading">{{datos.name}}</h2>   
