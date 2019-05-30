@@ -10,20 +10,20 @@ def home(request,pag_id=None):
         datos= Datos.objects.get(pk=1)
     except:
         datos= Datos.objects.get(pk=1)
-        pages= Pag.objects.get(pk=2)
+        pages= Pag.objects.get(name='Inicio')
     return render(request,"Datos/home.html",{'pages':pages,'datos':datos})
 def about(request):
     datos= Datos.objects.get(pk=1)
-    pages= Pag.objects.get(pk=3)
+    pages= Pag.objects.get(name='Acerca de')
     return render(request,'Datos/about.html/',{'pages':pages,'datos':datos})
 def portfolio(request):
     datos= Datos.objects.get(pk=1)
-    pages= Pag.objects.get(pk=4)
+    pages= Pag.objects.get(name='Portafolio')
     proyects = Project.objects.all()
     return render(request,'Datos/portfolio.html/',{'pages':pages,'proyects':proyects,'datos':datos})
 def contact(request):
     datos= Datos.objects.get(pk=1)
-    pages= Pag.objects.get(pk=1) #estoy pasando directamente ya que en la bd contact es la pk=1
+    pages= Pag.objects.get(name='Conctacto') #estoy pasando directamente ya que en la bd contact es la pk=1
     return render(request,'Datos/contact.html/',{'pages':pages,'datos':datos})
 def projectView(request,project_id):
     datos= Datos.objects.get(pk=1)
